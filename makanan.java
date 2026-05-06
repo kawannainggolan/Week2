@@ -15,6 +15,21 @@ class Makanan extends Produk {
         return kategori;
     }
 
+    @Override
+    public void tampilInfo() {
+        System.out.println("[MAKANAN]");
+        System.out.println("Nama : " + getNama());
+        System.out.println("Kategori : " + kategori);
+        System.out.println("Kedaluwarsa : " + kedaluwarsa);
+        System.out.println("Harga : Rp" + getHarga());
+        System.out.println("Stok : " + getStok());
+        System.out.println("---------------------");
+    }
+
+    @Override
+    public double hitungPajak(double harga) {
+        return harga * 0.10;
+
 
 
 }
