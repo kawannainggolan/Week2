@@ -40,4 +40,9 @@ class Elektronik extends Produk {
     public double hitungPajak(int jumlahBeli, double persenPajak) {
         return hitungTotalHarga(jumlahBeli) * (persenPajak / 100);
     }
+
+    public double hitungHargaSetelahPajak(int jumlahBeli) {
+        return hitungTotalHarga(jumlahBeli) + hitungPajak(jumlahBeli);
+    }
 }
+
