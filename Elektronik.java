@@ -17,5 +17,20 @@ class Elektronik extends Produk {
     public int getGaransiTahun() {
         return garansiTahun;
     }
+
+    @Override
+    public void tampilInfo() {
+        System.out.println("[ELEKTRONIK]");
+        System.out.println("Nama : " + getNama());
+        System.out.println("Merek : " + merek);
+        System.out.println("Garansi : " + garansiTahun + " tahun");
+        System.out.println("Harga : Rp" + getHarga());
+        System.out.println("Stok : " + getStok());
+        System.out.println("---------------------");
+    }
     
+    @Override
+    public double hitungPajak(double harga) {
+        return harga * 0.20;  // Pajak 20% untuk elektronik
+    }
 }
