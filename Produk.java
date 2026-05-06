@@ -43,7 +43,8 @@ abstract class Produk {
     }
 
     public abstract void tampilInfo();
-
     
-    
+    public abstract double hitungPajak(double harga);
 }
+    
+    
