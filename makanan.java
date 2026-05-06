@@ -30,6 +30,15 @@ class Makanan extends Produk {
     public double hitungPajak(double harga) {
         return harga * 0.10;
 
+    public double hitungDiskon(int jumlahBeli) {
+        if (jumlahBeli >= 10) {
+            return hitungTotalHarga(jumlahBeli) * 0.05;
+        }
+        return 0;
+    }
+    public double hitungDiskon(int jumlahBeli, double persenDiskon) {
+        return hitungTotalHarga(jumlahBeli) * (persenDiskon / 100);
+    }
 
 
 }
