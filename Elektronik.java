@@ -31,6 +31,13 @@ class Elektronik extends Produk {
     
     @Override
     public double hitungPajak(double harga) {
-        return harga * 0.20;  // Pajak 20% untuk elektronik
+        return harga * 0.20;
+    }
+
+    public double hitungPajak(int jumlahBeli) {
+        return hitungTotalHarga(jumlahBeli) * PPN;
+    }
+    public double hitungPajak(int jumlahBeli, double persenPajak) {
+        return hitungTotalHarga(jumlahBeli) * (persenPajak / 100);
     }
 }
